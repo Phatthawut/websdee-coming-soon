@@ -6,7 +6,7 @@ export const useCountdownStore = defineStore("countdown", {
     hours: "00",
     minutes: "00",
     seconds: "00",
-    targetDate: new Date("2025-04-15"), // You can change this date
+    targetDate: new Date("2025-04-20"), // You can change this date
   }),
   getters: {
     timeLeft: (state) => {
