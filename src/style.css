@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+@theme {
+  --font-thai: "Prompt", sans-serif;
+}

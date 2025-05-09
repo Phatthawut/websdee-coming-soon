@@ -6,7 +6,7 @@ export const useCountdownStore = defineStore("countdown", {
     hours: "00",
     minutes: "00",
     seconds: "00",
-    targetDate: new Date("2025-04-20"), // You can change this date
+    targetDate: new Date("2026-04-20"), // Default target date, can be updated via component props
   }),
   getters: {
     timeLeft: (state) => {
@@ -55,6 +55,11 @@ export const useCountdownStore = defineStore("countdown", {
         this.minutes = String(m).padStart(2, "0");
         this.seconds = String(s).padStart(2, "0");
       }
+    },
+    // Method to set target date (can be used from components)
+    setTargetDate(newDate) {
+      this.targetDate = new Date(newDate);
+      this.updateCountdown();
     },
   },
 });
